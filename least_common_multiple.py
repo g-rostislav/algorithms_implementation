@@ -1,3 +1,5 @@
+# lcm(a,b) = (a * b) / gcd(a, b)
+
 def gcd(a: int, b: int) -> int:
     if a == 0:
         return b
@@ -9,6 +11,11 @@ def gcd(a: int, b: int) -> int:
         return gcd(a, b % a)
 
 
+def lcm(a: int, b: int) -> int:
+    return int(a * b / gcd(a, b))
+
+
 if __name__ == '__main__':
     a, b = list(int(el) for el in input().split())
-    print(gcd(a, b))
+    print(lcm(a, b))
+
