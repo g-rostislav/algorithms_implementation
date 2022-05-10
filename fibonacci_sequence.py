@@ -1,9 +1,8 @@
-def main(n: int) -> int:
+def fib(n: int) -> int:
     assert n >= 0, 'Param "n" must be positive integer num'
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+
+    if n <= 1:
+        return n
 
     prev = 0
     curr = 1
@@ -18,6 +17,4 @@ def main(n: int) -> int:
 
 if __name__ == '__main__':
     n = int(input('N='))
-    print(main(n=n))
-    
-
+    print(fib(n=n))
